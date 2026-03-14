@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tri-Force 40+ | Pré-Treino 100% Natural | BioTerra</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --laranja: #e8670a;
+    --laranja-escuro: #b84f00;
+    --amarelo: #f5c800;
+    --verde: #2e7d32;
+    --verde-claro: #4caf50;
+    --preto: #0a0a0a;
+    --cinza-escuro: #1a1a1a;
+    --cinza: #2d2d2d;
+    --branco: #f9f9f9;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', sans-serif; background: var(--preto); color: var(--branco); overflow-x: hidden; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0a0a0a 0%, #1a0f00 40%, #0a1a00 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 60px 20px 40px;
+    position: relative; overflow: hidden; text-align: center;
+  }
+  .hero::before {
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse at 60% 30%, rgba(232,103,10,0.18) 0%, transparent 55%),
+                radial-gradient(ellipse at 20% 70%, rgba(46,125,50,0.12) 0%, transparent 50%);
+  }
+  .badge {
+    display: inline-block;
+    background: var(--verde);
+    color: #fff; font-family: 'Oswald', sans-serif;
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+    padding: 6px 20px; border-radius: 30px; margin-bottom: 24px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(42px, 9vw, 88px);
+    font-weight: 700; line-height: 1;
+    color: #fff; position: relative;
+    text-shadow: 0 0 60px rgba(232,103,10,0.3);
+  }
+  .hero h1 span { color: var(--laranja); }
+  .hero h1 .plus { color: var(--amarelo); }
+  .hero-sub {
+    font-size: clamp(16px, 3vw, 22px);
+    color: #aaa; margin: 20px auto 0;
+    max-width: 560px; line-height: 1.6;
+    font-weight: 300; position: relative;
+  }
+  .hero-sub strong { color: var(--verde-claro); font-weight: 700; }
+  .pills {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; margin: 32px 0; position: relative;
+  }
+  .pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 30px; padding: 8px 18px;
+    font-size: 13px; color: #ccc;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .pill span { font-size: 16px; }
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--laranja), var(--laranja-escuro));
+    color: #fff; font-family: 'Oswald', sans-serif;
+    font-size: 20px; font-weight: 600; letter-spacing: 1px;
+    padding: 18px 44px; border-radius: 8px;
+    text-decoration: none; position: relative;
+    box-shadow: 0 8px 32px rgba(232,103,10,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none; cursor: pointer;
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(232,103,10,0.5); }
+  .cta-btn.verde {
+    background: linear-gradient(135deg, var(--verde-claro), var(--verde));
+    box-shadow: 0 8px 32px rgba(76,175,80,0.4);
+  }
+  .cta-btn.verde:hover { box-shadow: 0 14px 40px rgba(76,175,80,0.5); }
+  .garantia-txt { font-size: 12px; color: #666; margin-top: 14px; position: relative; }
+
+  /* SECTIONS */
+  section { padding: 72px 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--laranja); font-weight: 700; margin-bottom: 12px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 700; line-height: 1.15;
+    color: #fff; margin-bottom: 16px;
+  }
+  .section-title span { color: var(--laranja); }
+  .section-desc { color: #888; font-size: 16px; line-height: 1.7; max-width: 620px; }
+
+  /* PROBLEMA */
+  .problema { background: #0f0a00; }
+  .problema-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px; margin-top: 40px;
+  }
+  .problema-card {
+    background: #1a0f00;
+    border: 1px solid #3a1f00;
+    border-radius: 14px; padding: 24px 20px;
+  }
+  .problema-card .icon { font-size: 28px; margin-bottom: 12px; }
+  .problema-card h3 { color: #f97316; font-family: 'Oswald', sans-serif; font-size: 17px; margin-bottom: 8px; }
+  .problema-card p { color: #888; font-size: 14px; line-height: 1.6; }
+
+  /* SOLUÇÃO */
+  .solucao { background: #050f05; }
+  .beneficios {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px; margin-top: 40px;
+  }
+  .beneficio {
+    background: #071507;
+    border: 1px solid #1a3d1a;
+    border-radius: 14px; padding: 24px 20px;
+    display: flex; gap: 16px; align-items: flex-start;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .beneficio:hover { border-color: var(--verde-claro); transform: translateY(-3px); }
+  .beneficio .ico {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: rgba(76,175,80,0.15); border: 1px solid rgba(76,175,80,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .beneficio h3 { color: var(--verde-claro); font-family: 'Oswald', sans-serif; font-size: 16px; margin-bottom: 6px; }
+  .beneficio p { color: #7a9e7a; font-size: 13px; line-height: 1.6; }
+
+  /* DIFERENCIAIS */
+  .diferenciais { background: #0a0a0a; }
+  .diff-list { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+  .diff-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: #141414; border: 1px solid #222;
+    border-radius: 12px; padding: 20px 20px;
+    transition: border-color 0.2s;
+  }
+  .diff-item:hover { border-color: var(--laranja); }
+  .diff-num {
+    font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700;
+    color: var(--laranja); opacity: 0.4; flex-shrink: 0; line-height: 1;
+  }
+  .diff-item h3 { color: #fff; font-family: 'Oswald', sans-serif; font-size: 18px; margin-bottom: 6px; }
+  .diff-item p { color: #777; font-size: 14px; line-height: 1.6; }
+
+  /* PUBLICO */
+  .publico { background: #080808; }
+  .pub-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px; margin-top: 36px;
+  }
+  .pub-card {
+    background: linear-gradient(135deg, #1a0f00, #0a1a00);
+    border: 1px solid #2a2000; border-radius: 14px;
+    padding: 22px 18px; text-align: center;
+  }
+  .pub-card .emoji { font-size: 32px; margin-bottom: 12px; }
+  .pub-card h3 { color: var(--amarelo); font-family: 'Oswald', sans-serif; font-size: 16px; margin-bottom: 8px; }
+  .pub-card p { color: #888; font-size: 13px; line-height: 1.5; }
+
+  /* DEPOIMENTOS */
+  .depoimentos { background: #050505; }
+  .dep-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px; margin-top: 36px;
+  }
+  .dep-card {
+    background: #0f0f0f; border: 1px solid #222;
+    border-radius: 14px; padding: 24px 20px;
+  }
+  .dep-stars { color: var(--amarelo); font-size: 16px; margin-bottom: 14px; }
+  .dep-card p { color: #bbb; font-size: 14px; line-height: 1.7; font-style: italic; margin-bottom: 16px; }
+  .dep-autor { color: #666; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* CTA FINAL */
+  .cta-final {
+    background: linear-gradient(135deg, #1a0800 0%, #0a1a00 100%);
+    text-align: center; padding: 80px 20px;
+    border-top: 1px solid #2a1500;
+  }
+  .preco-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px 40px; margin: 32px 0;
+  }
+  .preco-label { font-size: 13px; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .preco-valor { font-family: 'Oswald', sans-serif; font-size: 52px; color: var(--amarelo); font-weight: 700; line-height: 1; }
+  .preco-desc { font-size: 13px; color: #555; margin-top: 6px; }
+
+  /* FOOTER */
+  footer {
+    background: #030303; border-top: 1px solid #111;
+    padding: 32px 20px; text-align: center;
+  }
+  footer p { color: #333; font-size: 12px; line-height: 1.8; }
+  footer strong { color: #555; }
+
+  /* STICKY CTA */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(135deg, var(--laranja), var(--laranja-escuro));
+    padding: 14px 20px; text-align: center; z-index: 100;
+    box-shadow: 0 -4px 30px rgba(232,103,10,0.4);
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .sticky-cta span { color: #fff; font-family: 'Oswald', sans-serif; font-size: 16px; }
+  .sticky-cta a {
+    background: #fff; color: var(--laranja-escuro);
+    font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700;
+    padding: 10px 24px; border-radius: 6px; text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .sticky-cta a:hover { transform: scale(1.03); }
+
+  @media(max-width:600px) {
+    .sticky-cta { flex-direction: column; gap: 8px; padding: 12px 16px; }
+    .sticky-cta span { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <span>⚡ Tri-Force 40+ — Pré-Treino 100% Natural</span>
+  <a href="https://wa.me/5562994103061?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Tri-Force%2040%2B" target="_blank">Comprar pelo WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">🌿 BioTerra Saúde &amp; Energia</div>
+  <h1>TRI-FORCE <span>40</span><span class="plus">+</span></h1>
+  <p class="hero-sub">O pré-treino <strong>100% natural</strong> desenvolvido para homens acima de 40 anos que treinam sério — sem abrir mão da saúde.</p>
+  <div class="pills">
+    <div class="pill"><span>🌿</span> 100% Natural</div>
+    <div class="pill"><span>⚡</span> Energia sem crash</div>
+    <div class="pill"><span>💪</span> Foco máximo</div>
+    <div class="pill"><span>🚫</span> Zero corantes</div>
+    <div class="pill"><span>✅</span> 500g</div>
+  </div>
+  <a href="https://wa.me/5562994103061?text=Ol%C3%A1!%20Quero%20comprar%20o%20Tri-Force%2040%2B" target="_blank" class="cta-btn">QUERO MEU TRI-FORCE 40+ →</a>
+  <p class="garantia-txt">📲 Atendimento pelo WhatsApp · Entrega para todo o Brasil</p>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problema">
+  <div class="container">
+    <div class="section-label">O problema</div>
+    <h2 class="section-title">Depois dos 40, pré-treino sintético <span>cobra um preço alto</span></h2>
+    <p class="section-desc">Seu corpo mudou. Mas muitos suplementos continuam os mesmos — cheios de substâncias que seu organismo não precisa mais tolerar.</p>
+    <div class="problema-grid">
+      <div class="problema-card">
+        <div class="icon">💓</div>
+        <h3>Taquicardia</h3>
+        <p>Coração acelerado durante e após o treino — sinal de estimulantes em excesso.</p>
+      </div>
+      <div class="problema-card">
+        <div class="icon">😴</div>
+        <h3>Insônia</h3>
+        <p>Cafeína e estimulantes artificiais interferem no sono — justamente quando o músculo cresce.</p>
+      </div>
+      <div class="problema-card">
+        <div class="icon">📉</div>
+        <h3>Crash pós-treino</h3>
+        <p>Energia falsa que some e te deixa esgotado quando o efeito acaba.</p>
+      </div>
+      <div class="problema-card">
+        <div class="icon">⚠️</div>
+        <h3>Ingredientes desconhecidos</h3>
+        <p>Fórmulas que você não entende e que seu corpo não precisa ingerir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="solucao">
+  <div class="container">
+    <div class="section-label">A solução</div>
+    <h2 class="section-title">Tri-Force 40+ — <span>energia limpa,</span> resultado real</h2>
+    <p class="section-desc">Desenvolvido especialmente para o metabolismo de homens acima de 40 anos. Cada ingrediente tem um propósito. Nada escondido.</p>
+    <div class="beneficios">
+      <div class="beneficio">
+        <div class="ico">⚡</div>
+        <div>
+          <h3>Energia Gradual e Sustentada</h3>
+          <p>Sem pico artificial. Energia que começa no aquecimento e dura até o último rep.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="ico">🎯</div>
+        <div>
+          <h3>Foco Mental</h3>
+          <p>Concentração real para treinos mais produtivos e eficientes.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="ico">🌿</div>
+        <div>
+          <h3>Fórmula 100% Natural</h3>
+          <p>Você sabe exatamente o que está colocando no seu corpo. Transparência total.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="ico">😴</div>
+        <div>
+          <h3>Sono Preservado</h3>
+          <p>Sem estimulantes que roubam a qualidade do sono — seu maior aliado na recuperação.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="ico">💪</div>
+        <div>
+          <h3>Performance Real</h3>
+          <p>Mais força, mais disposição e melhor desempenho — de forma sustentável.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="ico">❤️</div>
+        <div>
+          <h3>Sem Taquicardia</h3>
+          <p>Treino intenso sem coração acelerado fora do controle. Seu coração agradece.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais">
+  <div class="container">
+    <div class="section-label">Por que escolher</div>
+    <h2 class="section-title">O que torna o Tri-Force 40+ <span>diferente</span></h2>
+    <div class="diff-list">
+      <div class="diff-item">
+        <div class="diff-num">01</div>
+        <div>
+          <h3>Desenvolvido para homens acima de 40</h3>
+          <p>Não é um pré-treino genérico. A fórmula respeita as necessidades e limitações do organismo masculino maduro.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-num">02</div>
+        <div>
+          <h3>Ingredientes 100% naturais — sem exceção</h3>
+          <p>Zero corantes artificiais, zero conservantes químicos, zero estimulantes sintéticos. Natureza que funciona.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-num">03</div>
+        <div>
+          <h3>BioTerra — empresa brasileira com CNPJ</h3>
+          <p>Você sabe com quem está comprando. Transparência, responsabilidade e produto com origem comprovada.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-num">04</div>
+        <div>
+          <h3>500g de produto — duração real</h3>
+          <p>Embalagem generosa para você ter resultado sem ficar repondo o produto toda semana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PÚBLICO -->
+<section class="publico">
+  <div class="container">
+    <div class="section-label">Para quem é</div>
+    <h2 class="section-title">O Tri-Force 40+ é para <span>você</span> se...</h2>
+    <div class="pub-grid">
+      <div class="pub-card">
+        <div class="emoji">🏋️</div>
+        <h3>Você treina regularmente</h3>
+        <p>Academia, crossfit, corrida, ciclismo — qualquer treino que exija o melhor de você.</p>
+      </div>
+      <div class="pub-card">
+        <div class="emoji">🎂</div>
+        <h3>Você tem 40 anos ou mais</h3>
+        <p>Seu corpo evoluiu. Seu suplemento também deveria.</p>
+      </div>
+      <div class="pub-card">
+        <div class="emoji">🌿</div>
+        <h3>Você valoriza o natural</h3>
+        <p>Prefere saber o que está ingerindo e não abrir mão da saúde por resultados rápidos.</p>
+      </div>
+      <div class="pub-card">
+        <div class="emoji">🚫</div>
+        <h3>Você cansou dos efeitos colaterais</h3>
+        <p>Taquicardia, insônia e crash não fazem parte do treino que você merece.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section style="background:#070707; padding:72px 20px;">
+  <div class="container" style="text-align:center;">
+    <div class="section-label">Veja na prática</div>
+    <h2 class="section-title" style="margin-bottom:32px;">Conheça o <span>Tri-Force 40+</span> em ação</h2>
+    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; border:1px solid #2a1500; box-shadow:0 0 60px rgba(232,103,10,0.2); max-width:640px; margin:0 auto;">
+      <iframe src="https://www.youtube.com/embed/Vq1xoZhGl-Q" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <p style="color:#555; font-size:13px; margin-top:20px;">📱 Assista e conheça tudo sobre o Tri-Force 40+</p>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos">
+  <div class="container">
+    <div class="section-label">Resultados reais</div>
+    <h2 class="section-title">O que nossos clientes <span>dizem</span></h2>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p>"Nunca mais voltei pro sintético. Treino com mais foco, durmo melhor e meu coração agradece. Produto incrível."</p>
+        <div class="dep-autor">— Carlos M., 47 anos · Academia há 12 anos</div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p>"Tinha medo de tentar natural achando que não ia funcionar. Me surpreendeu demais. Energia consistente do começo ao fim."</p>
+        <div class="dep-autor">— Roberto S., 52 anos · Crossfit</div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p>"Depois dos 45 meu médico pediu pra eu parar com estimulantes fortes. O Tri-Force 40+ foi a solução que eu precisava."</p>
+        <div class="dep-autor">— Marcos A., 45 anos · Corredor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <div class="section-label">Garanta o seu</div>
+    <h2 class="section-title">Pronto para treinar no seu <span>melhor nível?</span></h2>
+    <p class="section-desc" style="margin:0 auto; text-align:center;">Chame agora no WhatsApp e garanta seu Tri-Force 40+. Atendimento rápido, entrega para todo o Brasil.</p>
+    <div class="preco-box">
+      <div class="preco-label">Tri-Force 40+ · 500g</div>
+      <div class="preco-valor">BioTerra</div>
+      <div class="preco-desc">Consulte o preço e condições pelo WhatsApp</div>
+    </div>
+    <br/>
+    <a href="https://wa.me/5562994103061?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20comprar%20o%20Tri-Force%2040%2B" target="_blank" class="cta-btn verde" style="font-size:22px; padding:20px 52px;">
+      📲 COMPRAR PELO WHATSAPP
+    </a>
+    <p class="garantia-txt" style="margin-top:18px;">Clique acima · Você será direcionado ao WhatsApp da BioTerra</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong>BioTerra Saúde &amp; Energia</strong><br/>
+    CNPJ: 55.065.279/0001-83 · WhatsApp: (62) 99410-3061<br/>
+    Produto isento da obrigatoriedade da composição nutricional conforme Resolução RDC N°360 de dezembro de 2003.<br/>
+    © 2025 BioTerra — Todos os direitos reservados.
+  </p>
+</footer>
+
+<script>
+  // Smooth scroll e animação de entrada nos cards
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.beneficio, .diff-item, .pub-card, .dep-card, .problema-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
